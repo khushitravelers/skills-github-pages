@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the World - KHUSHI TRAVELS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+ color: #333;
+        }
+        header {
+            position: relative;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        header video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+        .logo img {
+            height: 50px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        h2 {
+            color: #0073e6;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+
+            line-height: 1.6;
+            font-size: 1.5rem;
+	    font-size: 18px;
+            margin: 10px 0;
+        }
+	.highlight {
+            font-weight: bold;
+            color: #0073e6;
+        }
+ 	.icon {
+            font-size: 22px;
+            margin-right: 8px;
+        }
+
+        .cta {
+            background: #ff5733;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .cta:hover {
+            background: #e04e2e;
+        }
+        nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .section {
+            padding: 50px;
+            text-align: center;
+        }
+        .destination-img {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .video-container iframe {
+            width: 80%;
+            max-width: 400px;
+            height: 300px;
+            border-radius: 10px;
+        }
+        .footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+            .cta {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+            .section {
+                padding: 30px;
+            }
+            .video-container iframe {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <video autoplay muted loop>
+            <source src="travel-background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <nav>
+
+  	<div class="logo">
+                <img src="logo.jpeg" alt="Khushi Travels Logo">
+            </div>
+
+            <a href="#destinations">Destinations</a>
+            <a href="#why-us">Why Us?</a>
+            <a href="#explore-more">Explore More</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <h1>Explore the World with Us</h1>
+        <p>Your dream destinations await!</p>
+	<p>KHUSHI TRAVELS</p>
+
+        <a href="#destinations" class="cta">Discover More</a>
+    </header>
+
+    <section id="destinations" class="section">
+        <h2>Popular Destinations</h2>
+        <p>Discover breathtaking landscapes, iconic landmarks, and hidden gems with KHUSHI TRAVELS. Whether you dream of relaxing on tropical beaches, exploring vibrant cities, or embarking on thrilling adventures, we take you to the world’s most spectacular destinations.</p>
+  <div class="gallery-container">
+
+        <img src="destination1.jpg" alt="Beautiful Beach" class="destination-img" loading="lazy">
+        <img src="destination2.jpg" alt="Mountain View" class="destination-img" loading="lazy">
+        <img src="destination3.jpg" alt="City Lights" class="destination-img" loading="lazy">
+ </div>
+    </section>
+
+
+<style>
+    .gallery-container {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .gallery-container img {
+        width: 30%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+    .gallery-container img:hover {
+        transform: scale(1.05);
+    }
+    @media (max-width: 768px) {
+        .gallery-container img {
+            width: 45%;
+        }
+    }
+    @media (max-width: 480px) {
+        .gallery-container img {
+            width: 100%;
+        }
+    }
+
+    .why-us-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        max-width: 900px;
+        margin: 20px auto;
+        text-align: left;
+    }
+    .why-us-box {
+        background: #f8f8f8;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    .why-us-box:hover {
+        transform: scale(1.05);
+    }
+    .why-us-box p:first-child {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .why-us-footer {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 30px;
+    }
+
+
+</style>
+
+
+
+
+    <section id="why-us" class="section">
+    <h2>Why Travel With Us?</h2>
+    <p>At <span class="highlight">KHUSHI TRAVELS</span>, we don’t just book trips—we craft <strong>unforgettable travel experiences</strong>. Here’s why travelers love us:</p>
+
+    <div class="why-us-container">
+        <div class="why-us-box">
+            <p>✈️ <span class="highlight">Best Flight Deals</span></p>
+            <p>Competitive fares on domestic and international flights with hassle-free booking.</p>
+        </div>
+        <div class="why-us-box">
+            <p>🏨 <span class="highlight">Hotels & Staycations</span></p>
+            <p>A variety of stays, from budget-friendly to luxury resorts.</p>
+        </div>
+        <div class="why-us-box">
+            <p>🌍 <span class="highlight">Tailor-Made Holiday Packages</span></p>
+            <p>Whether adventure or relaxation, we create perfect itineraries.</p>
+        </div>
+        <div class="why-us-box">
+            <p>🎯 <span class="highlight">Custom Travel Planning</span></p>
+            <p>Personalized trips tailored to your preferences.</p>
+        </div>
+        <div class="why-us-box">
+            <p>🛂 <span class="highlight">Visa Assistance</span></p>
+            <p>Hassle-free visa processing for stress-free travel.</p>
+        </div>
+        <div class="why-us-box">
+            <p>🚗 <span class="highlight">Airport Transfers & Transport</span></p>
+            <p>Smooth connectivity from the moment you arrive.</p>
+        </div>
+        <div class="why-us-box">
+            <p>🛍️ <span class="highlight">Exclusive Travel Deals</span></p>
+            <p>Special discounts and offers for our customers.</p>
+        </div>
+        <div class="why-us-box">
+            <p>📞 <span class="highlight"> Customer Support</span></p>
+            <p>Assistance whenever and wherever you need it.</p>
+        </div>
+    </div>
+
+    <p class="why-us-footer">
+        <strong>Your journey starts with us! Experience seamless, stress-free, and unforgettable travel with <span class="highlight">KHUSHI TRAVELS</span>.</strong>
+    </p>
+</section>
+
+    <section id="explore-more" class="section">
+        <h2>Explore More</h2>
+        <p>Travel is more than just visiting new places—it's about experiencing the world in exciting and unforgettable ways. Dive into breathtaking landscapes, vibrant cultures, and thrilling adventures through our curated travel videos and guides.</p>
+        
+	<div class="video-container">
+            <iframe src="VIDEO_ID1.mp4" frameborder="0" allowfullscreen></iframe>
+	 	<iframe src="VIDEO_ID2.mp4" frameborder="0" allowfullscreen></iframe>
+            <!--<iframe src="https://www.youtube.com/embed/VIDEO_ID2" frameborder="0" allowfullscreen></iframe>*/-->
+        </div>
+    <p> Watch inspiring travel stories and explore dream destinations from your screen.</p>
+</section>
+
+
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email: khushitraveldesk@gmail.com| Phone: +91-9205745111</p>
+<a href="https://wa.me/919205745111" target="_blank">
+  <img src="whatsapp-icon.png" alt="Chat with us on WhatsApp" width="50">
+<p>Chat with us on WhatsApp</p>
+</a>
+    <form action="https://formspree.io/f/myzeypnd" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="cta">Send Message</button>
+	
+    </form>
+</section>
+
+
+
+<style>
+    .contact-form {
+        max-width: 500px;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .contact-form input, 
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+    .contact-form button {
+        border: none;
+        cursor: pointer;
+    }
+</style>
+
+
+
+    <footer class="footer">
+        <p>&copy; 2025 Explore the World with KHUSHI TRAVELS. All rights reserved.</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
