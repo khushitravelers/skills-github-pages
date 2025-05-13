@@ -47,8 +47,9 @@
 
         .logo {
             position: absolute;
-            top: 10px;
-            left: 20px;
+            top: 100px;
+            left: 200px;
+	    flex: 1 1 auto;
         }
         .logo img {
             height: 50px;
@@ -158,7 +159,7 @@
 </head>
 <body>
     <header>
-        <video autoplay muted loop>
+        <video autoplay muted loop width="100%" height="auto">
             <source src="travel-background.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -320,14 +321,18 @@
   <img src="whatsapp-icon.png" alt="Chat with us on WhatsApp" width="50">
 <p>Chat with us on WhatsApp</p>
 </a>
-    <form action="https://formspree.io/f/myzeypnd" method="POST" class="contact-form">
+    <form action="https://formspree.io/f/myzeypnd" method="POST" class="contact-form" id="myContactForm" onsubmit="handleSubmit(event)" autocomplete="off">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <input type="text" name="subject" placeholder="Subject" required>
         <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
         <button type="submit" class="cta">Send Message</button>
-	
+		
     </form>
+
+
+ 
+
 </section>
 
 
@@ -368,6 +373,16 @@
 
 
 
+
+<!-- JavaScript placed at the end of body -->
+  <script>
+    // This will reset all forms before page unload (refresh/close/back)
+    window.onbeforeunload = () => {
+      for (const form of document.getElementsByTagName('form')) {
+        form.reset();
+      }
+    };
+  </script>
 
 
 
